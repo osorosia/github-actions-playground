@@ -16,6 +16,6 @@ jobs:
       # https://github.com/actions/setup-go
       - uses: actions/setup-go@v4
         with:
-          go-version-file: "go.mod"
+          go-version-file: "go/go.mod"
 
       - run: go test -v ./...
