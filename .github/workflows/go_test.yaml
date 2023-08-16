@@ -1,6 +1,14 @@
 name: Go Test
 
-on: push
+on:
+  pull_request:
+    paths:
+      - "go/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "go/**"
 
 defaults:
   run:
@@ -8,7 +16,6 @@ defaults:
 
 jobs:
   test:
-    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
